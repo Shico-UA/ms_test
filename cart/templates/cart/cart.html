@@ -1,0 +1,83 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping Cart Application</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="{% static 'css/custom.css' %}" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+    <h1>Your Shopping Cart</h1>
+</div>
+
+<div class="container">
+    <p id="description">Today we are selling goods A, B, C, D and E by the following prices:
+    <ul class="list-group">
+        <li class="list-group-item">A costs 50 cents (Special offer: Three A cost $1.30 cents)</li>
+        <li class="list-group-item">B costs 30 cents (Special offer: Two B cost 45 cents)</li>
+        <li class="list-group-item">$1.99 per kg of C</li>
+        <li class="list-group-item">D costs $1.20</li>
+        <li class="list-group-item">E costs $0.90 (Special offer: Buy two D and get one E free)</li>
+    </ul>
+</div>
+
+<div class="container">
+    <form class="custom-form" method='get'>
+        {{ form }}
+        <span id="temp"></span>
+        <input type="submit" value="Get Price" id="but" class="field btn btn-primary">
+    </form>
+    <p id="top-line">Your products cart now contains:</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>A</td>
+                <td>{{ a_qty }}</td>
+                <td>{{ a_total }}</td>
+            </tr>
+            <tr>
+                <td>B</td>
+                <td>{{ b_qty }}</td>
+                <td>{{ b_total }}</td>
+            </tr>
+            <tr>
+                <td>C</td>
+                <td>{{ total_kgs }} kgs</td>
+                <td>{{ c_total }}</td>
+            </tr>
+            <tr>
+                <td>D</td>
+                <td>{{ d_qty }}</td>
+                <td>{{ d_total }}</td>
+            </tr>
+            <tr>
+                <td>E</td>
+                <td>{{ e_qty }}</td>
+                <td>{{ e_total }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="container">
+    <p>Total price for all products in the cart is: <span class="badge">$ {{ total_price }}</span></p>
+</div>
+
+<div class="container reset-button">
+    <a href="{% url 'cart:calculate_total' %}"><input type="button" value="Reset All" class="btn btn-primary btn-block"></a>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="{% static 'js/custom.js' %}"></script>
+</body>
+</html>

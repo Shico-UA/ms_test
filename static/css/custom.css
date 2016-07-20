@@ -1,0 +1,99 @@
+.container {
+    background-color: #e7e7e7;
+    width: 90%;
+    margin-bottom: 1%;
+    overflow-x:auto;
+}
+
+.temporary {
+    width: 380px;
+    margin-right: 5px;
+    color: #000;
+    border-color: #2e6da4;
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.reset-button {
+    background-color: inherit;
+    padding: 0;
+}
+
+.custom-form {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.badge {
+    font-size: 30px;
+    margin: 10px;
+}
+
+
+h1 {
+    color: #761c19;
+    text-align: center;
+    margin-top: 10px;
+}
+
+p {
+    margin-top: 10px;
+    color: #761c19;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+label {
+    color: #761c19;
+    font-size: 20px;
+}
+
+
+#top-line {
+    border-top: solid #761c19 1px;
+}
+
+#id_title {
+    margin: 5px;
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+/*Tables*/
+table {
+    font-size: 15px;
+    width: 25%%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+td {
+    border-top: 1px solid #e7e7e7;
+    padding: 15px 15px 15px 15px;
+}
+
+th {
+    border-collapse: collapse;
+    color: #761c19;
+    padding: 15px 15px 15px 15px;
+}
